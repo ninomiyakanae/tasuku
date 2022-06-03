@@ -52,20 +52,44 @@ p {
 
 /* ヘッダー */
 
+// #header-list {
+//   color: #fff;
+//   font-weight: bolder;
+// }
+
+// #header-list:hover {
+//   color: #C0C0C0;
+//   text-decoration: none;
+// }
+
+#header {
+  background-color: teal;
+}
+
 #logo {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
   color: #fff;
-  text-transform: uppercase;
+  text-transform: capitalize;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
 }
 
 #logo:hover {
-  color: #fff;
+  color: #808080;
   text-decoration: none;
+}
+
+li .header-list {
+    color: #fff !important;
+    font-weight: bold;
+}
+
+li .header-list:hover {
+    color: silver !important;
+    background-color: teal !important;
 }
 
 /* デバッグウインドウ */
@@ -96,3 +120,39 @@ p {
     color: $state-danger-text;
   }
 }
+
+.jumbotron {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    margin-bottom: 30px;
+    color: inherit;
+    background-color: #fff;
+}    
+
+#top-main-title {
+    font-style: italic;
+    font-weight: bold;
+}
+
+a {
+    /* color: #337ab7; */
+    color:  #337ab7;
+    text-decoration: none;
+}
+
+
+
+a:hover {
+    /* color: #337ab7; */
+    ccolor: #23527c;
+    text-decoration: underline;
+    
+}
+
+/* ユーザー情報テーブル */
+
+.user-table {
+  vertical-align: middle;
+  text-align: center;
+}
+
