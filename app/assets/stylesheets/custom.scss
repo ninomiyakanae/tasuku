@@ -66,6 +66,10 @@ p {
   background-color: teal;
 }
 
+#dropdown-title {
+    background-color: teal;
+}
+
 #logo {
   float: left;
   margin-right: 10px;
@@ -90,6 +94,11 @@ li .header-list {
 li .header-list:hover {
     color: silver !important;
     background-color: teal !important;
+}
+
+li .dropdown-header {
+    background-color: rgba(200,200,200,0.5);
+    font-weight: bold;
 }
 
 /* デバッグウインドウ */
@@ -155,4 +164,14 @@ a:hover {
   vertical-align: middle;
   text-align: center;
 }
+
+.pull-right {
+    float: right !important;
+}
+
+.table table-bordered  {
+  vertical-align: middle;
+  text-align: center;
+}
+
 

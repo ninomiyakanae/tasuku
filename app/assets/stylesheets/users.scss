@@ -1,9 +1,67 @@
 /* ユーザー情報テーブル */
 
-.user-table {
-  vertical-align: middle;
-  text-align: center;
+.table {
+  // text-align: left;
+  vertical-align: center;
+  // background-color:#888;
 }
+
+.table-iten {
+  text-align: center;
+  vertical-align: text-bottom;  
+  background-color:#f5f5f5;
+  width: 150px;
+  height: 40px;
+  padding: 8px;
+}  
+
+#table-user th {
+    white-space: nowrap;
+    text-align: center;
+}
+
+.table {
+    text-align: left
+    
+}
+
+body {
+    font-size: 14px;
+}
+
+.table-idou tr {
+  vertical-align: text-bottom;  
+  width: 150px;
+  height: 35px;
+}
+
+
+
+
+
+
+
+
+// .table-iten th {
+// vertical-align: text-bottom;  
+// width: 150px;
+// height: 35px;
+// }
+
+
+
+
+// .bbb {
+//   display: flex;
+//   align-items: flex-end;
+  
+  
+// }
+
+
+// th {
+//   vertical-align: bottom;
+// }
 
 /* 入力フォーム */
 
@@ -30,3 +88,33 @@
     vertical-align: middle;
   }  
 }
+
+// #table table-bordered table-condensed user-table {
+//   td {
+//     vertical-align: middle;
+//     vertical-align: center;
+//     vertical-align: middle;
+//   }  
+// }
+
+// .table table-bordered table-condensed user-table {
+// //   text-align:center;
+// //   margin:0 auto;
+// // }  
+  
+// // #table-user th {
+// //     vertical-align: middle;
+// //     white-space: nowrap;
+// //     text-align: left;
+// // }  
+
+// td {
+// vertical-align: center;
+// vertical-align: middle;
+// }
+
+// #table-user tr {
+//     vertical-align: middle;
+//     white-space: nowrap;
+//     text-align: center;
+// }

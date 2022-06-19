@@ -1,23 +1,115 @@
 <% provide(:title, @user.name) %>
-
+<h1>プロフィール</h1>
 <div class="row">
-  <div class="col-md-10 col-md-offset-1">
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th><%= User.human_attribute_name :name %></th>
-          <th><%= User.human_attribute_name :email %></th>
-          <th><%= User.human_attribute_name :created_at %></th>
+  <div class="col-md-6 col-md-offset-3">
+    <table class="table table-bordered">
+        <tr class="table-idou">
+          <th class="table-iten">ID</th>
+          <td><%= @user.id %></td>
         </tr>
-      </thead>
 
-      <tbody>
-        <tr>
+        <tr class="table-idou">
+          <th class="table-iten">名前</th>
           <td><%= @user.name %></td>
-          <td><%= @user.email %></td>
-          <td><%= @user.created_at %></td>
         </tr>
-      </tbody>
+  
+        <tr class="table-idou">
+          <th class="table-iten">メールアドレス</th>
+          <td><%= @user.email %></td>
+        </tr>
+  
+        <tr class="table-idou">
+          <th class="table-iten">作成日</th>
+          <td><%= @user.created_at.strftime('%Y/%m/%d %H:%M').to_s %></td>
+        </tr>
     </table>
   </div>    
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<% provide(:title, @user.name) %>-->
+
+<!--<div class="row">-->
+<!--  <div class="col-md-10 col-md-offset-1">-->
+<!--    <table class="table table-hover">-->
+<!--      <thead>-->
+<!--        <tr>-->
+<!--          <th><%= User.human_attribute_name :name %></th>-->
+<!--          <th><%= User.human_attribute_name :email %></th>-->
+<!--          <th><%= User.human_attribute_name :created_at %></th>-->
+<!--        </tr>-->
+<!--      </thead>-->
+
+<!--      <tbody>-->
+<!--        <tr>-->
+<!--          <td><%= @user.name %></td>-->
+<!--          <td><%= @user.email %></td>-->
+<!--          <td><%= @user.created_at %></td>-->
+<!--        </tr>-->
+<!--      </tbody>-->
+<!--    </table>-->
+<!--  </div>    -->
+<!--</div>-->
+
+
+
+
+
+
+<!--<h1>プロフィール</h1>-->
+<!--<% provide(:title, @user.name) %>-->
+
+<!--<div>-->
+<!--<table class="table table-bordered table-condensed user-table">-->
+  
+<!--  <tr><th>ID</th><td><%= @user.id %></td></tr>-->
+
+<!--  <tr><th>名前</th><td><%= @user.name %></td></tr>-->
+  
+<!--  <tr><th>メールアドレス</th><td><%= @user.email %></td></tr>-->
+  
+<!--  <tr><th>作成日</th><td><%= @user.created_at.strftime('%Y/%m/%d %H:%M').to_s %></td></tr>-->
+
+
+
+
+ <!--  <tr>-->
+      <!--    <th><%= User.human_attribute_name :ID %></th>-->
+      <!--    <th><%= User.human_attribute_name :名前 %></th>-->
+      <!--    <th><%= User.human_attribute_name :メールアドレス %></th>-->
+      <!--    <th><%= User.human_attribute_name :作成日 %></th>-->
+
+      <!--  </tr>-->
+      <!--</thead>-->
+
+      <!--<tbody>-->
+      <!--  <tr>-->
+      <!--    <td><%= @user.id %></td>-->
+      <!--    <td><%= @user.name %></td>-->
+      <!--    <td><%= @user.email %></td>-->
+      <!--    <td><%= @user.created_at.strftime('%Y/%m/%d %H:%M').to_s %></td>-->
+
+<!--</table>-->
+
