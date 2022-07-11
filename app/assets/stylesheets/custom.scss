@@ -182,3 +182,15 @@ a:hover {
 #table-tasks td {
     vertical-align: middle;
 }
+// C6 新規登録の上の隙間
+.btn-form {
+    margin-top: 10px;
+}
+// C6　名称と詳細の上下揃え
+.label-form {
+    margin-top: 5px;
+}
+// <!--対象者のユーザーをbootstrapで追加-->
+.label-primary {
+    background-color: #337ab7;
+}
