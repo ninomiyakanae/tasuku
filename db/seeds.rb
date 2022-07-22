@@ -21,7 +21,7 @@ puts "Users Created"
 admin_user = User.first
 guest_user = User.find(2)
 
-50.times do |n|
+100.times do |n|
   task_name = "タスク#{n + 1}"
   description = "タスク詳細#{n + 1}"
   admin_user.tasks.create!(name: task_name, description: description)
