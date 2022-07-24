@@ -18,8 +18,8 @@ end
 
 @users = User.order(:created_at).take(3)
 50.times do |n|
-  task_name = Faker::Lorem.sentence(2)
-  task_description = Faker::Lorem.sentence(5)
+  task_name = "タスク#{n + 1}" 
+  task_description = "タスク詳細#{n + 1}"
   @users.each { |user| user.tasks.create!(name: task_name, description: task_description) }
 end
 
