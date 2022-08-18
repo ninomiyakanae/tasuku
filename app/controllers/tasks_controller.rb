@@ -1,6 +1,23 @@
 class TasksController < ApplicationController
-  before_action :set_user
-  before_action :set_task, only: %i(show edit update destroy)
+  # before_action :set_user
+  # before_action :set_task, only: %i(show edit update destroy index)
+  # # before_action :correct_user, only: [:show, :edit, :update, :destroy]
+  # # before_action :admin_user, only: [:destroy, :index]
+  # # before_action :admin_or_correct_user, only: [:destroy, :show, :edit, :update]
+  # # before_action :logged_in_user, only: [:index, :show, :edit, :update, :destroy]
+  # # before_action :correct_user, only: [:edit, :update, :index]
+  # before_action :correct_user, only: [:new, :edit, :update]
+  # before_action :admin_or_correct_user, only: [:update, :edit]
+  # before_action :limitation_correct_user, only: [:new, :edit]
+
+  before_action :set_user, only: [:index, :show, :new, :edit, :update]
+  before_action :logged_in_user, only: [:index, :show, :edit, :update, :destroy]
+  before_action :correct_user, only: :new
+  before_action :admin_or_correct_user, only: :update
+  before_action :limitation_correct_user, only: :edit
+
+
+
 
   def index
     @tasks = @user.tasks.where(user_id: @user.id).order(created_at: :desc)
