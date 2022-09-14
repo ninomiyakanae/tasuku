@@ -1,9 +1,9 @@
 class TasksController < ApplicationController
   before_action :set_user, only: [:index, :show, :new, :edit, :update]
+  before_action :set_task, only: [:edit]
   before_action :logged_in_user, only: [:index, :show, :edit, :update, :destroy]
-  before_action :correct_user, only: :new
+  before_action :correct_user, only: [:edit, :index]
   before_action :admin_or_correct_user, only: :update
-  before_action :limitation_correct_user, only: :edit
 
 
   def index
@@ -11,9 +11,9 @@ class TasksController < ApplicationController
   end
 
   def show
-  #   @user = User.find(params[:user_id])
-  #   @task = Task.find(params[:id])
-  # render :show
+    @user = User.find(params[:user_id])
+    @task = Task.find(params[:id])
+  render :show
   end
 
   def new
@@ -59,18 +59,27 @@ class TasksController < ApplicationController
     end
 
     def set_task
-      # unless @task = @user.tasks.find_by(id: params[:id])
-      unless @task = @user.tasks.find_by(params[:user_id])  
+      unless @task = @user.tasks.find_by(id: params[:id])
         flash[:danger] = "権限がありません。"
-        redirect_to user_tasks_url @user
-        
-      end
-    end
-    
-    def limitation_correct_user
-      unless @current_user == params[:user_id].to_i
-        flash[:danger] = "ほかのユーザーの編集はできません。"
-        redirect_to root_url
+        redirect_to user_tasks_path @user
       end
     end
 end
+
+
+  # private
+  #   def set_user
+  #     @user = User.find(params[:user_id])
+  #   end
+    
+  #   def set_task
+  #     @task = @user.tasks.find_by(id: params[:id])
+  #     unless @task == current_user?(@user)
+  #       flash[:danger] = "権限がありません。"
+  #       redirect_to user_tasks_path @user
+  #     end
+  #   end
+    
+  #   def task_params
+  #     params.require(:task).permit(:task_name, :task_description)
+  #   end
