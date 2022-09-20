@@ -23,9 +23,9 @@
           <!--対象者のユーザーをbootstrapで追加-->
         </td>        
         <td>
-          <% if current_user.admin? && !current_user?(user) %>
+          <% unless user.admin? %>
             <%= link_to "削除", user, method: :delete,
-                data: { confirm: "削除してよろしいですか？" },
+                data: { confirm: "#{user.name}を削除します。よろしいですか？" },
                 class: "btn btn-danger pull-right" %>
           <% end %>
         </td>
