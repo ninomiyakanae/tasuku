@@ -4,11 +4,12 @@ class UsersController < ApplicationController
   before_action :correct_user, only: [:edit, :update]
   before_action :admin_user, only: :destroy
   # before_action :admin_or_correct_user, only: [:new]
-# /signup/
+# /users/
 
   def index
     @users = User.paginate(page: params[:page], per_page: 20)
-  end
+    redirect_to(root_url) unless current_user?(@user)
+  end   
 
   def show
     
